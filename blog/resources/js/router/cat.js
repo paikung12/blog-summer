@@ -5,6 +5,7 @@ import create from '../components/Create'
 import  edit from  '../components/Edit'
 import  map from  '../components/map'
 import  user from  '../components/ExampleComponent'
+import  viewData from '../components/viweData'
 
 
 
@@ -38,6 +39,11 @@ const  router = new VueRouter ({
             path : '/user',
             name : "user",
             component :user
+        },
+        {
+            path : '/viewData/:uid',
+            name : "viewData",
+            component :viewData
         },
 
 

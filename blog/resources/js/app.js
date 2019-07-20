@@ -4,6 +4,9 @@ require('./bootstrap');
 
 window.Vue = require('vue');
 window.axios  = require('axios');
+window.moment = require('moment-timezone');
+
+moment.tz('Asia/Bangkok')
 
 
 Vue.component('app', require('./app.vue').default);

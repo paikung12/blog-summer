@@ -19,7 +19,8 @@
                     <td>{{user.phone}}</td>
                     <td>{{user.password}}</td>
                     <td>
-                        <button  @click="gotoEdit(user.id)"  class="btn btn-primary" >Edit Data</button>
+                        <button  @click="gotoviewdata(user.id)"  class="btn btn-info" >View Data </button>
+                        <button  @click="gotoEdit(user.id)"  class="btn btn-warning" >Edit Data</button>
                         <button  v-on:click="destroyhahaha(user.id,index)"  type="button" class="btn btn-danger">Delete</button>
                     </td>
 
@@ -42,6 +43,9 @@
             this.getUserData();
         },
         methods:{
+            gotoviewdata(data){
+                this.$router.push({name:"viewData",params : {uid:data}})
+            },
             gotoMap(){
                 this.$router.push({name:"map"})
             },
